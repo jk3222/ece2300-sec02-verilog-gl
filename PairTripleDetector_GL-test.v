@@ -57,7 +57,7 @@ module Top();
       `ECE2300_CHECK_EQ( out, out_ );
 
       #2;
-
+      
     end
   endtask
 
@@ -87,6 +87,16 @@ module Top();
     //''' ACTIVITY '''''''''''''''''''''''''''''''''''''''''''''''''''''''
     // Add checks for exhaustive testing (check all possible inputs)
     //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    //    in0 in1 in2 out
+    check( 0,  0,  0,  0);
+    check( 0,  0,  1,  0);
+    check( 0,  1,  0,  0);
+    check( 0,  1,  1,  1);
+    check( 1,  0,  0,  0);
+    check( 1,  0,  1,  1);
+    check( 1,  1,  0,  1);
+    check( 1,  1,  1,  1);
 
     t.test_case_end();
   endtask
